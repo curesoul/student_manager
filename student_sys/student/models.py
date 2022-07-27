@@ -19,7 +19,7 @@ class Student(models.Model):
     qq = models.CharField(max_length=128, verbose_name="qq")
     phone = models.CharField(max_length=128, verbose_name="手机")
 
-    status = models.IntegerField(choices=STATUS_ITEMS, default=0,verbose_name="审核状态")
+    status = models.IntegerField(choices=STATUS_ITEMS, default=0, verbose_name="审核状态")
 
     created_time = models.DateTimeField(auto_now_add=True, editable=False, verbose_name="创建时间")
 
@@ -28,3 +28,4 @@ class Student(models.Model):
 
     class Meta:
         verbose_name = verbose_name_plural = "学员信息"
+
